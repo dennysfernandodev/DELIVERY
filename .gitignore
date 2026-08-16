@@ -1,4 +1,3 @@
 node_modules/
-DADOS DO YUTA/qr-code/*
-!DADOS DO YUTA/qr-code/.gitkeep
+DADOS DO YUTA/qr-code/
 npm-debug.log*
