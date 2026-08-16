@@ -29,7 +29,7 @@
   },
   "scripts": {
     "installation": {
-      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates nodejs npm\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\necho 'INSTALACAO CONCLUIDA'",
+      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates nodejs npm\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\nchown -R 999:987 /mnt/server\nfind /mnt/server -type l -exec chown -h 999:987 {} +\necho 'INSTALACAO CONCLUIDA'",
       "container": "ghcr.io/pterodactyl/installers:debian",
       "entrypoint": "bash"
     }
