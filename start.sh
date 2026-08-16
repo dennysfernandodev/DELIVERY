@@ -68,7 +68,8 @@ while :; do
   fi
 
   started_at="$(date +%s)"
-  run_bot "$1" &
+  # Mantem o console do Wings ligado ao readline mesmo com o supervisor em segundo plano.
+  run_bot "$1" <&0 &
   CHILD_PID=$!
   wait "$CHILD_PID"
   exit_code=$?
