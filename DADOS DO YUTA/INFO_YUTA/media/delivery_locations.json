@@ -1,0 +1,22 @@
+{
+  "CASA": {
+    "key": "CASA",
+    "trigger": "CASA",
+    "reference": "CASA",
+    "degreesLatitude": -15.4606453,
+    "degreesLongitude": -47.6142151,
+    "name": "CASA",
+    "address": "CASA",
+    "savedAt": "2026-06-18T07:30:57.792Z"
+  },
+  "126 BARRO": {
+    "key": "126 BARRO",
+    "trigger": "126 barro",
+    "reference": "126 barro",
+    "degreesLatitude": -15.4261013,
+    "degreesLongitude": -47.6103199,
+    "name": "126 barro",
+    "address": "126 barro",
+    "savedAt": "2026-06-21T13:04:54.083Z"
+  }
+}

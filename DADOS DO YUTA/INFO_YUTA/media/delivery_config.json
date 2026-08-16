@@ -1,0 +1,158 @@
+{
+  "enabled": true,
+  "delay_seconds": 0,
+  "next_capture_at": 0,
+  "duplicate_window_minutes": 180,
+  "max_message_age_seconds": 120,
+  "require_ok_to_continue": true,
+  "hold_until_ok": true,
+  "hold_since_at": 0,
+  "watch_all_groups": false,
+  "watch_groups": [
+    "120363406998825784@g.us",
+    "120363310939219840@g.us",
+    "120363427225554927@g.us"
+  ],
+  "ignore_groups": [],
+  "sticker_on_detect": true,
+  "backend_sticker_delay_enabled": false,
+  "backend_sticker_delay_ms": 0,
+  "fast_sticker_mode": true,
+  "fast_sticker_min_len": 8,
+  "sticker_path": "./DADOS DO YUTA/data/media/sticker/delivery_auto.webp",
+  "notify_numbers": [],
+  "forward_private_owner": false,
+  "forward_group_id": "",
+  "forward_group_map": {},
+  "command_group_id": "",
+  "confidence_min_auto": 85,
+  "confidence_min_notify": 70,
+  "pending_max_age_minutes": 30,
+  "top_mode_enabled": false,
+  "top_merchants": [
+    {
+      "key": "PINGAO",
+      "name": "Pingao",
+      "number": "556191254508"
+    },
+    {
+      "key": "FARMACIA 24 HORAS",
+      "name": "Farmacia 24 Horas",
+      "number": "556191303137"
+    },
+    {
+      "key": "PARRILLA E BRASA",
+      "name": "Parrilla e Brasa",
+      "number": "556191468733"
+    },
+    {
+      "key": "COQUINHO",
+      "name": "Conveniência Coquinho",
+      "number": "556199167472"
+    },
+    {
+      "key": "MARIA COXINHA",
+      "name": "Maria Coxinha",
+      "number": "556191924807"
+    },
+    {
+      "key": "FAST FRUIT",
+      "name": "Fast Fruit",
+      "number": "556193679758"
+    },
+    {
+      "key": "FEITICO DELIVERY",
+      "name": "Feitiço Delivery",
+      "number": "5561994269271"
+    },
+    {
+      "key": "LK MULTI MARCAS ATENDIMENTO COM HORA MARCADA.",
+      "name": "Lk Multi Marcas, Atendimento Com Hora Marcada.",
+      "number": "556192731537"
+    },
+    {
+      "key": "SUPREMO ACAI",
+      "name": "Supremo Açaí",
+      "number": "556191035011"
+    },
+    {
+      "key": "ADEGAS DISTRIBUIDORA",
+      "name": "Adegas Distribuidora",
+      "number": "556198849592"
+    },
+    {
+      "key": "EIKE ACAI",
+      "name": "Eike Açaí",
+      "number": "556191158850"
+    },
+    {
+      "key": "GOIAS POLPAS E ACAI",
+      "name": "Goiás Polpas e Açaí",
+      "number": "556191815466"
+    },
+    {
+      "key": "ACAITERIA MIX",
+      "name": "Açaiteria Mix",
+      "number": "556192999006"
+    },
+    {
+      "key": "VILAACAI",
+      "name": "vilaacai",
+      "number": "556194641717"
+    },
+    {
+      "key": "VILA ACAI",
+      "name": "Vila acai",
+      "number": "5561994641717"
+    },
+    {
+      "key": "ACAI 3 NORTE",
+      "name": "Acai 3 Norte",
+      "number": ""
+    },
+    {
+      "key": "PACHECO",
+      "name": "PACHECO",
+      "number": "556191719881"
+    },
+    {
+      "key": "VILA TROPICAL",
+      "name": "VILA TROPICAL",
+      "number": "556192016520"
+    },
+    {
+      "key": "BOT DFS TECH",
+      "name": "BOT DFS TECH",
+      "number": "556191153970"
+    },
+    {
+      "key": "CALDOS BAIANO",
+      "name": "CALDOS BAIANO",
+      "number": "556191495470"
+    },
+    {
+      "key": "BITCOIN •",
+      "name": "BITCOIN •",
+      "number": ""
+    },
+    {
+      "key": "BITCOIN2",
+      "name": "BITCOIN2",
+      "number": "556192277349"
+    },
+    {
+      "key": "PAPA",
+      "name": "papa",
+      "number": "556191199880"
+    }
+  ],
+  "so_as_puras_enabled": false,
+  "presence_online_control_enabled": true,
+  "sticker_repeat_control_log_enabled": false,
+  "assignment_stats_log_enabled": false,
+  "bot_mode": "delivery-only",
+  "updatedAt": "2026-06-07T19:13:39.078180Z",
+  "last_delivery_sticker_sent_at": 0,
+  "last_delivery_10min_notice_for": 0,
+  "last_delivery_10min_notice_at": 0
+}

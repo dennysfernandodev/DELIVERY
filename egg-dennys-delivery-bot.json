@@ -1,0 +1,79 @@
+{
+  "_comment": "DO NOT EDIT: FILE GENERATED FOR PTERODACTYL PANEL",
+  "meta": {
+    "version": "PTDL_v2",
+    "update_url": null
+  },
+  "exported_at": "2026-08-16T00:00:00+00:00",
+  "name": "DENNYS BOT - Entregas",
+  "author": "admin@bitcoinhost.site",
+  "description": "Instalacao automatica do DENNYS BOT com Node.js 22 e pareamento por codigo.",
+  "features": null,
+  "docker_images": {
+    "Node.js 22": "ghcr.io/parkervcp/yolks:nodejs_22"
+  },
+  "file_denylist": [
+    "ARQUIVES/connect.js",
+    "ARQUIVES/js/*.js",
+    "ARQUIVES/funcoes/*.js",
+    "yuta.js",
+    "DADOS DO YUTA/session/*",
+    "DADOS DO YUTA/INFO_YUTA/media/bot_rental_*.json"
+  ],
+  "startup": "bash start.sh",
+  "config": {
+    "files": "{\n  \"DADOS DO YUTA/INFO_YUTA/media/INFO_YUTA.json\": {\n    \"parser\": \"json\",\n    \"find\": {\n      \"NomeDoBot\": \"{{env.BOT_NAME}}\",\n      \"ownerName\": \"{{env.OWNER_NAME}}\",\n      \"ownerNumber\": \"{{env.OWNER_NUMBER}}\"\n    }\n  }\n}",
+    "startup": "{\n  \"done\": \"DENNYS BOT CONECTADO AO WHATSAPP\"\n}",
+    "logs": "{}",
+    "stop": "^C"
+  },
+  "scripts": {
+    "installation": {
+      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\nmkdir -p 'DADOS DO YUTA/session'\nchmod 700 'DADOS DO YUTA/session'\necho 'INSTALACAO CONCLUIDA'",
+      "container": "ghcr.io/pterodactyl/installers:debian",
+      "entrypoint": "bash"
+    }
+  },
+  "variables": [
+    {
+      "name": "Nome do bot",
+      "description": "Nome exibido pelo bot.",
+      "env_variable": "BOT_NAME",
+      "default_value": "BOT DE ENTREGAS",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|max:40",
+      "field_type": "text"
+    },
+    {
+      "name": "Nome do dono",
+      "description": "Nome do proprietario da instancia.",
+      "env_variable": "OWNER_NAME",
+      "default_value": "NOVO CLIENTE",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|string|max:60",
+      "field_type": "text"
+    },
+    {
+      "name": "Numero do dono",
+      "description": "Numero com DDI e DDD, somente digitos.",
+      "env_variable": "OWNER_NUMBER",
+      "default_value": "5500000000000",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|regex:/^55[0-9]{10,11}$/",
+      "field_type": "text"
+    },
+    {
+      "name": "Numero para pareamento",
+      "description": "Numero do WhatsApp que recebera o codigo de pareamento, com DDI e DDD.",
+      "env_variable": "WHATSAPP_PAIRING_NUMBER",
+      "default_value": "5500000000000",
+      "user_viewable": true,
+      "user_editable": true,
+      "rules": "required|regex:/^55[0-9]{10,11}$/",
+      "field_type": "text"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "__distant_pair_fee": 15,
+  "__distant_pairs": [
+    { "from": "PAQUETA", "to": "IMIGRANTES" },
+    { "from": "IMIGRANTES", "to": "SAO JOSE" },
+    { "from": "ITAPUA 1", "to": "BARROLANDIA" },
+    { "from": "ITAPUA 2", "to": "BARROLANDIA" }
+  ],
+  "SETOR NORTE": {
+    "base": 6,
+    "subareas": {
+      "Q14": 7,
+      "Q16": 7,
+      "Q5": 8,
+      "Q10": 8,
+      "Q11": 8,
+      "Q19": 8,
+      "Q20": 8,
+      "Q21": 9,
+      "QA13": 8,
+      "QA15": 8,
+      "QA16": 10,
+      "QA17": 10,
+      "Q17": 10,
+      "Q6": 10
+    }
+  },
+  "SETOR LESTE": {
+    "base": 6,
+    "subareas": {
+      "Q5": 7,
+      "Q6": 8,
+      "Q17": 8,
+      "Q18": 8,
+      "Q19": 8,
+      "QA17": 8,
+      "QA18": 8,
+      "QA19": 8
+    }
+  },
+  "SANTA RITA": { "base": 6 },
+  "SETOR SUL": {
+    "base": 6,
+    "subareas": {
+      "Q3": 8,
+      "Q5": 7,
+      "Q6": 8,
+      "Q7": 8,
+      "Q8": 8,
+      "Q9": 8,
+      "QA7": 8,
+      "QA8": 8,
+      "QA9": 8,
+      "QA10": 8
+    }
+  },
+  "SETOR OESTE": {
+    "base": 6,
+    "subareas": {
+      "Q3": 7,
+      "Q4": 10,
+      "Q5": 8,
+      "Q6": 7,
+      "Q10": 12,
+      "Q12": 8,
+      "QA8": 8,
+      "QA9": 8,
+      "VALE": 8
+    }
+  },
+  "PARQUE SOL NASCENTE 1": { "base": 8 },
+  "PARQUE SOL NASCENTE 2": { "base": 8 },
+  "RESIDENCIAL COLIBRI": { "base": 8 },
+  "SAO JOSE 1": { "base": 9 },
+  "SAO JOSE 2": { "base": 12 },
+  "SAO JOSE": { "base": 9 },
+  "BARROLANDIA": { "base": 9 },
+  "SETOR DOS IMIGRANTES": { "base": 9 },
+  "IMIGRANTES": { "base": 9 },
+  "MUTIRAO": { "base": 12 },
+  "ITAPUA 1": { "base": 9 },
+  "ITAPUA 2": { "base": 10 },
+  "PARQUE DA GAVEA": { "base": 10 },
+  "PAQUETA": { "base": 9 },
+  "JARDIM DAS PAINEIRAS": { "base": 9 },
+  "PAINEIRAS": { "base": 9 },
+  "JARDIM DAS PALMEIRAS": { "base": 12 },
+  "PALMEIRAS": { "base": 12 },
+  "VIA LESTE": { "base": 10 },
+  "SAO FRANCISCO": { "base": 12 },
+  "RESIDENCIAL SAO FRANCISCO": { "base": 12 },
+  "BRASILINHA 16": { "base": 15 },
+  "BRASILINHA 17": { "base": 15 },
+  "CPRV": { "base": 30 },
+  "AFRODITE": { "base": 15 },
+  "PARQUE IMPERIAL": { "base": 15 },
+  "SANTA MONICA": { "base": 20 },
+  "LAGOA": { "base": 40 },
+  "LOTEAMENTO SANTA MARIA": { "base": 9 },
+  "TERRA PROMETIDA": { "base": 12 },
+  "MANSOES OESTE": { "base": 8 },
+  "SETOR DE OFICINA SUL": { "base": 15 },
+  "SETOR DE CHACARA SAO JOSE": { "base": 25 },
+  "CAIC": { "base": 10 }
+}
