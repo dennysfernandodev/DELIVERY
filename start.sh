@@ -41,6 +41,11 @@ export TZ="America/Sao_Paulo"
 export UV_THREADPOOL_SIZE="${UV_THREADPOOL_SIZE:-32}"
 export NODE_OPTIONS="--dns-result-order=ipv4first ${NODE_OPTIONS}"
 
+if [ ! -f "node_modules/@whiskeysockets/baileys/package.json" ]; then
+  printf "[%s] DENNYS BOT | instalando dependencias ausentes...\n" "$(date '+%d/%m %H:%M:%S')"
+  npm ci --omit=dev --ignore-scripts || exit 64
+fi
+
 AUTO_RESTART="${YUTA_AUTO_RESTART:-1}"
 RESTART_DELAY=1
 MAX_RESTART_DELAY=30

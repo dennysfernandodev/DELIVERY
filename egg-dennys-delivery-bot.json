@@ -29,7 +29,7 @@
   },
   "scripts": {
     "installation": {
-      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\nmkdir -p 'DADOS DO YUTA/qr-code'\nchmod 700 'DADOS DO YUTA/qr-code'\necho 'INSTALACAO CONCLUIDA'",
+      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates nodejs npm\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\nmkdir -p 'DADOS DO YUTA/qr-code'\nchmod 700 'DADOS DO YUTA/qr-code'\necho 'INSTALACAO CONCLUIDA'",
       "container": "ghcr.io/pterodactyl/installers:debian",
       "entrypoint": "bash"
     }
