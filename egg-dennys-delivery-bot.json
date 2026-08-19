@@ -5,9 +5,9 @@
     "update_url": null
   },
   "exported_at": "2026-08-16T00:00:00+00:00",
-  "name": "DENNYS BOT - Entregas",
+  "name": "DENNYS BOT CRIPTOGRAFADO",
   "author": "admin@bitcoinhost.site",
-  "description": "Instalacao automatica do DENNYS BOT com Node.js 22 e pareamento por codigo.",
+  "description": "Instalacao automatica do DENNYS BOT protegido, com codigo JavaScript ofuscado, trava de execucao para a Bitcoin Host, Node.js 22 e pareamento por codigo.",
   "features": null,
   "docker_images": {
     "Node.js 22": "ghcr.io/parkervcp/yolks:nodejs_22"
@@ -20,17 +20,17 @@
     "DADOS DO YUTA/qr-code/*",
     "DADOS DO YUTA/INFO_YUTA/media/bot_rental_*.json"
   ],
-  "startup": "bash start.sh",
+  "startup": "bash start.sh sim",
   "config": {
     "files": "{\n  \"DADOS DO YUTA/INFO_YUTA/media/INFO_YUTA.json\": {\n    \"parser\": \"json\",\n    \"find\": {\n      \"NomeDoBot\": \"{{env.BOT_NAME}}\",\n      \"ownerName\": \"{{env.OWNER_NAME}}\",\n      \"ownerNumber\": \"{{env.OWNER_NUMBER}}\"\n    }\n  }\n}",
-    "startup": "{\n  \"done\": \"DENNYS BOT CONECTADO AO WHATSAPP\"\n}",
+    "startup": "{\n  \"done\": \"CONECTADO COM SUCESSO AO WHATSAPP\"\n}",
     "logs": "{}",
     "stop": "^C"
   },
   "scripts": {
     "installation": {
-      "script": "#!/bin/bash\nset -e\napt-get update\napt-get install -y --no-install-recommends git ca-certificates nodejs npm\nrm -rf /mnt/server/* /mnt/server/.[!.]* /mnt/server/..?* 2>/dev/null || true\ngit clone --depth 1 https://github.com/dennysfernandodev/DELIVERY.git /mnt/server\ncd /mnt/server\nnpm ci --omit=dev --ignore-scripts\nchown -R 999:987 /mnt/server\nfind /mnt/server -type l -exec chown -h 999:987 {} +\necho 'INSTALACAO CONCLUIDA'",
-      "container": "ghcr.io/pterodactyl/installers:debian",
+      "script": "#!/bin/bash\nset -euo pipefail\napt-get update\napt-get install -y --no-install-recommends git ca-certificates\nmkdir -p /mnt/server\ncd /mnt/server\nif [ -d .git ]; then\n  git pull --ff-only\nelif [ -z \"$(find . -mindepth 1 -maxdepth 1 -print -quit)\" ]; then\n  git clone --depth 1 --branch main https://github.com/dennysfernandodev/DELIVERY.git .\nelse\n  echo 'A pasta do servidor nao esta vazia e nao contem o repositorio esperado.' >&2\n  exit 10\nfi\nnpm ci --omit=dev --ignore-scripts\nmkdir -p 'DADOS DO YUTA/qr-code'\nchown -R 999:987 /mnt/server\nfind /mnt/server -type l -exec chown -h 999:987 {} +\necho 'INSTALACAO CRIPTOGRAFADA CONCLUIDA'",
+      "container": "node:22-bookworm-slim",
       "entrypoint": "bash"
     }
   },
@@ -59,7 +59,7 @@
       "name": "Numero do dono",
       "description": "Numero com DDI e DDD, somente digitos.",
       "env_variable": "OWNER_NUMBER",
-      "default_value": "5500000000000",
+      "default_value": "556193529919",
       "user_viewable": true,
       "user_editable": true,
       "rules": "required|regex:/^55[0-9]{10,11}$/",
